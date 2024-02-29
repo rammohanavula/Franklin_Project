@@ -28,7 +28,7 @@
 
 /* Highlight row on hover */
 .table table tbody tr:hover {
-  background-color: #f5f555;
+  background-color: #e6f7ff;
   cursor: pointer;
 }
 
