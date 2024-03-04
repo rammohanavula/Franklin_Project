@@ -10,6 +10,7 @@
 .ccards > ul > li {
   border: 1px solid var(--dark-color);
   background-color: var(--background-color);
+  border-radius: 8px; /* Add rounded edges */
 }
 
 .ccards .cards-card-body {
@@ -28,4 +29,5 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: 8px; /* Add rounded edges to images */
 }
