@@ -12,15 +12,15 @@
   background-color: var(--background-color);
 }
 
-.ccards .ccards-ccard-body {
+.ccards .ccards-card-body {
   margin: 16px;
 }
 
-.ccards .ccards-ccard-image {
+.ccards .ccards-card-image {
   line-height: 0;
 }
 
-.ccards .ccards-ccard-body > *:first-child {
+.ccards .ccards-card-body > *:first-child {
   margin-top: 0;
 }
 
