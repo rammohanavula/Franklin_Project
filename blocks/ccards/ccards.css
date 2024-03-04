@@ -15,7 +15,7 @@
 }
 
 .ccards > ul > li:hover {
-  box-shadow: 0 25px 40px #808080; /* Add a subtle shadow on hover */
+  box-shadow: 0 15px 25px #808080; /* Add a subtle shadow on hover */
 }
 
 .ccards .cards-card-body {
