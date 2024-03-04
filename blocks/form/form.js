@@ -58,8 +58,6 @@ async function handleSubmit(form) {
   const submit = form.querySelector('button[type="submit"]');
   try {
     form.setAttribute('data-submitting', 'true');
-    // Remove the line that disables the submit button
-    // submit.disabled = true;
 
     // create payload
     const payload = generatePayload(form);
@@ -74,7 +72,7 @@ async function handleSubmit(form) {
       sampleRUM('form:submit', { source: '.form', target: form.dataset.action });
       if (form.dataset.confirmation) {
         // Redirect to the confirmation page
-        window.location.href = form.dataset.confirmation;
+        window.location.href = 'https://www.youtube.com/';
       } else {
         // Display a thank you message
         const thankYouMessage = document.createElement('p');
@@ -91,6 +89,7 @@ async function handleSubmit(form) {
     form.setAttribute('data-submitting', 'false');
   }
 }
+
 
 
 export default async function decorate(block) {
