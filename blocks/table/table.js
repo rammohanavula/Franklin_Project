@@ -41,7 +41,7 @@ async function createTableHeader(table){
     let tr=document.createElement("tr");
     let sno=document.createElement("th");sno.appendChild(document.createTextNode("S.No"));
     let ticker=document.createElement("th");ticker.appendChild(document.createTextNode("Ticker"));
-    let name=document.createElement("th");name.appendChild(document.createTextNode("Namw"));
+    let name=document.createElement("th");name.appendChild(document.createTextNode("Name"));
     let price=document.createElement("th");price.appendChild(document.createTextNode("Price"));
     let change=document.createElement("th");change.appendChild(document.createTextNode("Change"));
     tr.append(sno);tr.append(ticker);tr.append(name);tr.append(price);tr.append(change);
