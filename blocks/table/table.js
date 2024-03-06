@@ -40,21 +40,21 @@ export default async function decorate(block) {
 async function createTableHeader(table){
     let tr=document.createElement("tr");
     let sno=document.createElement("th");sno.appendChild(document.createTextNode("S.No"));
-    let conuntry=document.createElement("th");conuntry.appendChild(document.createTextNode("Countries"));
-    let continent=document.createElement("th");continent.appendChild(document.createTextNode("Continent"));
-    let capital=document.createElement("th");capital.appendChild(document.createTextNode("Capital"));
+    let name=document.createElement("th");name.appendChild(document.createTextNode("Name"));
+    let location=document.createElement("th");location.appendChild(document.createTextNode("Location"));
+    let country=document.createElement("th");country.appendChild(document.createTextNode("Country"));
     let abbr=document.createElement("th");abbr.appendChild(document.createTextNode("Abbreviation"));
-    tr.append(sno);tr.append(conuntry);tr.append(capital);tr.append(continent);tr.append(abbr);
+    tr.append(sno);tr.append(name);tr.append(location);tr.append(country);tr.append(abbr);
     table.append(tr);
 }
 async function createTableRow(table,row,i){
     let tr=document.createElement("tr");
     let sno=document.createElement("td");sno.appendChild(document.createTextNode(i));
-    let conuntry=document.createElement("td");conuntry.appendChild(document.createTextNode(row.Country));
-    let continent=document.createElement("td");continent.appendChild(document.createTextNode(row.Capital));
-    let capital=document.createElement("td");capital.appendChild(document.createTextNode(row.Continent));
+    let name=document.createElement("td");name.appendChild(document.createTextNode(row.Name));
+    let location=document.createElement("td");location.appendChild(document.createTextNode(row.Location));
+    let country=document.createElement("td");country.appendChild(document.createTextNode(row.Country));
     let abbr=document.createElement("td");abbr.appendChild(document.createTextNode(row.Abbreviation));
-    tr.append(sno);tr.append(conuntry);tr.append(continent);tr.append(capital);tr.append(abbr);
+    tr.append(sno);tr.append(name);tr.append(location);tr.append(country);tr.append(abbr);
     table.append(tr);
 }
 
@@ -63,7 +63,7 @@ async function createSelectMap(jsonURL){
     const { pathname } = new URL(jsonURL);
 
     const resp = await fetch(pathname);
-    optionsMap.set("all","All Countries");optionsMap.set("asia","Asia");optionsMap.set("europe","Europe");optionsMap.set("africa","Africa");optionsMap.set("america","America");optionsMap.set("australia","Australia");
+    optionsMap.set("all", "All Grounds"); optionsMap.set("australia", "Australia"); optionsMap.set("england", "England"); optionsMap.set("bangladesh", "Bangladesh"); optionsMap.set("india", "India"); optionsMap.set("newzeland", "Newzeland"); optionsMap.set("pakisthan", "Pakisthan"); optionsMap.set("southafrika", "SouthAfrika"); optionsMap.set("srilanka", "Srilanka"); optionsMap.set("uae", "UAE");
     const select=document.createElement('select');
     select.id = "region";
     select.name="region";
