@@ -60,3 +60,21 @@
     width: 40%;
     font-size: large;
 }
+.countries table,
+th {
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    padding: 0 1em;
+}
+
+.countries table,
+td {
+    border: 1px solid black;
+    background-color: aliceblue;
+    padding: 0 1em;
+}
+
+.countries .region-select>select {
+    width: 40%;
+    font-size: large;
+}
