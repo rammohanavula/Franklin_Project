@@ -63,7 +63,7 @@ async function createSelectMap(jsonURL){
     const { pathname } = new URL(jsonURL);
 
     const resp = await fetch(pathname);
-    optionsMap.set("all", "Nifty 50"); optionsMap.set("australia", "Australia"); optionsMap.set("england", "England"); optionsMap.set("bangladesh", "Bangladesh"); optionsMap.set("india", "India"); optionsMap.set("newzeland", "Newzeland"); optionsMap.set("pakisthan", "Pakisthan"); optionsMap.set("southafrika", "SouthAfrika"); optionsMap.set("srilanka", "Srilanka"); optionsMap.set("uae", "UAE");
+    optionsMap.set("nifty50", "Nifty 50"); optionsMap.set("niftybank", "Nifty Bank"); 
     const select=document.createElement('select');
     select.id = "region";
     select.name="region";
