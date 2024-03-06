@@ -40,21 +40,21 @@
 async function createTableHeader(table){
     let tr=document.createElement("tr");
     let sno=document.createElement("th");sno.appendChild(document.createTextNode("S.No"));
-    let name=document.createElement("th");name.appendChild(document.createTextNode("Name"));
-    let location=document.createElement("th");location.appendChild(document.createTextNode("Location"));
-    let country=document.createElement("th");country.appendChild(document.createTextNode("Country"));
-    let abbr=document.createElement("th");abbr.appendChild(document.createTextNode("Abbrevation"));
-    tr.append(sno);tr.append(name);tr.append(location);tr.append(country);tr.append(abbr);
+    let ticker=document.createElement("th");ticker.appendChild(document.createTextNode("Ticker"));
+    let name=document.createElement("th");name.appendChild(document.createTextNode("Namw"));
+    let price=document.createElement("th");price.appendChild(document.createTextNode("Price"));
+    let change=document.createElement("th");change.appendChild(document.createTextNode("Change"));
+    tr.append(sno);tr.append(ticker);tr.append(name);tr.append(price);tr.append(change);
     table.append(tr);
 }
 async function createTableRow(table,row,i){
     let tr=document.createElement("tr");
     let sno=document.createElement("td");sno.appendChild(document.createTextNode(i));
+    let ticker=document.createElement("td");ticker.appendChild(document.createTextNode(row.Ticker));
     let name=document.createElement("td");name.appendChild(document.createTextNode(row.Name));
-    let location=document.createElement("td");location.appendChild(document.createTextNode(row.Location));
-    let country=document.createElement("td");country.appendChild(document.createTextNode(row.Country));
-    let abbr=document.createElement("td");abbr.appendChild(document.createTextNode(row.Abbrevation));
-    tr.append(sno);tr.append(name);tr.append(location);tr.append(country);tr.append(abbr);
+    let price=document.createElement("td");price.appendChild(document.createTextNode(row.Price));
+    let change=document.createElement("td");change.appendChild(document.createTextNode(row.Change));
+    tr.append(sno);tr.append(ticker);tr.append(name);tr.append(price);tr.append(change);
     table.append(tr);
 }
 
@@ -63,7 +63,7 @@ async function createSelectMap(jsonURL){
     const { pathname } = new URL(jsonURL);
 
     const resp = await fetch(pathname);
-    optionsMap.set("all", "All Grounds"); optionsMap.set("australia", "Australia"); optionsMap.set("england", "England"); optionsMap.set("bangladesh", "Bangladesh"); optionsMap.set("india", "India"); optionsMap.set("newzeland", "Newzeland"); optionsMap.set("pakisthan", "Pakisthan"); optionsMap.set("southafrika", "SouthAfrika"); optionsMap.set("srilanka", "Srilanka"); optionsMap.set("uae", "UAE");
+    optionsMap.set("all", "Nifty 50"); optionsMap.set("australia", "Australia"); optionsMap.set("england", "England"); optionsMap.set("bangladesh", "Bangladesh"); optionsMap.set("india", "India"); optionsMap.set("newzeland", "Newzeland"); optionsMap.set("pakisthan", "Pakisthan"); optionsMap.set("southafrika", "SouthAfrika"); optionsMap.set("srilanka", "Srilanka"); optionsMap.set("uae", "UAE");
     const select=document.createElement('select');
     select.id = "region";
     select.name="region";
