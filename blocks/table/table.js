@@ -63,7 +63,7 @@ async function createSelectMap(jsonURL){
     const { pathname } = new URL(jsonURL);
 
     const resp = await fetch(pathname);
-    optionsMap.set("all", "Nifty 50"); optionsMap.set("niftybank", "Nifty Bank"); 
+    optionsMap.set("all", "Nifty 50"); optionsMap.set("niftybank", "Nifty Bank");optionsMap.set("niftynext50", "Nifty Next 50"); 
     const select=document.createElement('select');
     select.id = "region";
     select.name="region";
