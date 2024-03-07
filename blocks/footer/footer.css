@@ -12,3 +12,6 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+footer .footer a {
+  color: green;
+}
